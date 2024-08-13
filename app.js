@@ -106,6 +106,10 @@ app.use("/listings/:id/reviews", reviewRouter);
 //user router
 app.use("/", userRouter);
 //++++++++++++++++++++++++++++++++++++++++++++++++++++
+//route /
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
 //this is apply for other route that is wrong
 app.all("/listings", (req, res, next) =>{
   console.log("For all route");
