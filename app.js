@@ -118,8 +118,8 @@ app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 //++++++++++++++++++++++++++++++++++++++++++++++++++++
 //this is apply for other route that is wrong
-app.all("*", (req, res, next) =>{
-  next(new ExpressError(404, "Page not found!"));
+app.all("/listings", (req, res, next) =>{
+  console.log("For all route");
 });
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
