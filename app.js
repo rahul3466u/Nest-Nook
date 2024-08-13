@@ -98,17 +98,6 @@ const store = MongoStore.create({
     next();
  });
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//demo User using passport
-// app.get("/demouser", async(req, res) =>{
-//    let fakeUser = new User({
-//     email: "student@gmail.com",
-//     username: "delta-student"
-//    });
-
-//    let registeredUser = await User.register(fakeUser, "Helloworld");
-//    res.send(registeredUser);
-// });
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //use all routes
 //listingRouter
 app.use("/listings", listingRouter);
