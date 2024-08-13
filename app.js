@@ -111,8 +111,8 @@ app.get("/", (req, res) => {
   res.redirect("/listings");
 });
 //this is apply for other route that is wrong
-app.all("/listings", (req, res, next) =>{
-  console.log("For all route");
+app.all("*", (req, res, next) =>{
+  res.redirect("/listings");
 });
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
